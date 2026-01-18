@@ -18,12 +18,17 @@ spring:
         format_sql: true
         show_sql: false
 
+  mvc:
+    log-request-details: true
+
   liquibase:
     enabled: true
     change-log: classpath:db/migration/migration-master.yml
 
 server:
-  port: 8080
+  port: ${SERVER_PORT:8080}
+  error:
+    include-stacktrace: always
 
 jwt:
   secret: ${JWT_SECRET}
@@ -36,6 +41,10 @@ crypto:
 logging:
   level:
     root: INFO
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.boot: INFO
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql: TRACE
+
 

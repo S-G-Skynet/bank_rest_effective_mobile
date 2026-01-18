@@ -1,6 +1,9 @@
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/BankcardsApplication.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/config/mapper/CardMapper.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/config/mapper/UserMapper.java
+/Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/config/swagger/SwaggerConfig.java
+/Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/config/swagger/errors/CommonApiErrors.java
+/Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/config/swagger/errors/OpenApiErrorCustomizer.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/controller/AuthController.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/controller/CardController.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/controller/UserController.java
@@ -33,7 +36,8 @@
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/exception/user/UserWithThisUsernameAlreadyExist.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/repository/CardRepository.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/repository/UserRepository.java
-/Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/security/CustomUserDetails.java
+/Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/security/CustomUserDetailsService.java
+/Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/security/CustomUserPrinciple.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/security/PasswordConfig.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/security/SecurityConfig.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/security/exceptionhandlers/JwtAccessDeniedHandler.java
@@ -48,4 +52,5 @@
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/service/impl/TransferServiceImpl.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/service/impl/UserServiceImpl.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/util/CryptoService.java
+/Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/util/DataInitializer.java
 /Users/said_g/Desktop/My_projects/effective_mobile/bank_rest/src/main/java/com/example/bankcards/util/SecurityUtil.java

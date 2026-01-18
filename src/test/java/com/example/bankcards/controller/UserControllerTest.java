@@ -60,7 +60,7 @@ class UserControllerTest {
         mockMvc.perform(post("/api/v1/users/create/client")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
-                .andExpect(status().isOk())
+                .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.username").value("client"))
                 .andExpect(jsonPath("$.role").value("USER"));
 
@@ -84,7 +84,7 @@ class UserControllerTest {
         mockMvc.perform(post("/api/v1/users/create/admin")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
-                .andExpect(status().isOk())
+                .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.role").value("ADMIN"));
 
         verify(userService).create(any(), eq(UserRole.ADMIN));

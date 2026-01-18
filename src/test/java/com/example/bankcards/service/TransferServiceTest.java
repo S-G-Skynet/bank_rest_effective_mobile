@@ -3,6 +3,7 @@ package com.example.bankcards.service;
 
 import com.example.bankcards.dto.card.TransferRequest;
 import com.example.bankcards.entity.Card;
+import com.example.bankcards.entity.CardStatus;
 import com.example.bankcards.entity.User;
 import com.example.bankcards.exception.card.AccessDeniedException;
 import com.example.bankcards.exception.card.CardNotFoundException;
@@ -47,12 +48,14 @@ class TransferServiceTest {
                 .id(10L)
                 .user(user)
                 .balance(new BigDecimal("100.00"))
+                .status(CardStatus.ACTIVE)
                 .build();
 
         toCard = Card.builder()
                 .id(20L)
                 .user(user)
                 .balance(new BigDecimal("50.00"))
+                .status(CardStatus.ACTIVE)
                 .build();
     }
 
@@ -131,5 +134,27 @@ class TransferServiceTest {
         assertEquals(new BigDecimal("70.00"), fromCard.getBalance());
         assertEquals(new BigDecimal("80.00"), toCard.getBalance());
     }
+
+    @Test
+    void transfer_shouldThrowException_whenCardNotActive() {
+        fromCard.setStatus(CardStatus.BLOCKED);
+
+        TransferRequest request =
+                new TransferRequest(10L, 20L, new BigDecimal("30.00"));
+
+        when(cardRepository.findById(10L)).thenReturn(Optional.of(fromCard));
+        when(cardRepository.findById(20L)).thenReturn(Optional.of(toCard));
+
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> transferService.transfer(1L, request)
+        );
+
+        assertEquals(
+                "Cannot to transfer when card is not active",
+                exception.getMessage()
+        );
+    }
+
 }
 

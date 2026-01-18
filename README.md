@@ -30,6 +30,8 @@ docker compose up --build
 username: admin
 password: password
 ```
+### Swagger UI/OpenApi
+#### url `http://localhost:8080/swagger-ui/index.html#/`
 
 ## Аутентификация
 
@@ -467,3 +469,4 @@ GET /api/v1/cards/status?status=BLOCKED&page=0&size=5&sort=expirationDate,asc
 - Spring Data JPA
 - PostgreSQL
 - Liquibase
+- Swagger

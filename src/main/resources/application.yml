@@ -47,4 +47,6 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql: TRACE
 
-
+springdoc:
+  swagger-ui:
+    operations-sorter: method

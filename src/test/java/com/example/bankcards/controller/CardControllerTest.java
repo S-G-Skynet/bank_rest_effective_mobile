@@ -79,7 +79,7 @@ class CardControllerTest {
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(objectMapper.writeValueAsString(request))
                 )
-                .andExpect(status().isOk());
+                .andExpect(status().isCreated());
 
         verify(cardService).create(any(CreateCardRequest.class));
     }
